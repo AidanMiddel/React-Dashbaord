@@ -1,0 +1,49 @@
+.popup {
+    width: 50rem;
+    height: 50rem;
+    background: #4C0033;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.popup__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.popup__label{
+    font-size: 150%;
+}
+
+.popup__input {
+    background: none;
+    border: none;
+    color: #eee;
+    font-size: 100%;
+    border-bottom: 0.2rem solid #eee;
+    outline: none;
+}
+
+.popup__button {
+    width: 20rem;
+    height: 5rem;
+    font-size: 100%;
+    font-family: sans-serif;
+    border: none;
+    color: #eee;
+    border-radius: 5rem;
+    background: linear-gradient(to bottom right, #AF0171, 60%, #790252);
+    transition: 2s all;
+}
+
+.popup__button:hover {
+    cursor: pointer;
+    filter: hue-rotate(60deg);
+}
