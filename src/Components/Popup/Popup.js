@@ -7,6 +7,10 @@ class Popup extends React.Component {
         this.state = { input: "" }
     }
 
+    componentDidMount() {
+        this.setState({ input: this.props.cardClicked.name })
+    }
+
     input = (event) => {
         this.setState({ input: event.target.value })
     }
@@ -18,6 +22,7 @@ class Popup extends React.Component {
     }
 
     render() {
+        console.log(this.props.cardClicked)
         return (
             <article className="popup">
                 <div className="popup__wrapper">
