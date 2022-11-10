@@ -1,7 +1,6 @@
 Les 8 - Componenten aanpassen in de front-end op basis van meerdere states
     
 
-Video 9/16 => https://web.microsoftstream.com/video/70091c10-44bf-4c90-94ad-2fd8f218b785
 Video 10/16 => https://web.microsoftstream.com/video/0c88af8e-1bc5-4ceb-b0b6-947cae14a3a8
 Video 11/16 => https://web.microsoftstream.com/video/1f2428f8-3470-4428-9fa6-91858b5d95b3
 Video 12/16 => https://web.microsoftstream.com/video/17a85f4e-f05e-42af-9785-0d66d6163570
