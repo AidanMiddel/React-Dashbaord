@@ -6,6 +6,7 @@ import Popup from "../Popup/Popup";
 import chooseImage from "../../helpers/chooseImage";
 import productsObject from "../../data/products";
 import navigationItemsObject from "../../data/navigationItems";
+import products from "../../data/products";
 
 
 class Dashboard extends React.Component {
@@ -44,24 +45,33 @@ class Dashboard extends React.Component {
             open: !this.state.open,
         })
     }
+    editButtonClicked = (inputFromPopup) => {
+        let productCards = this.state.productCards;
+        let newState = productCards.map(product => {
+            if(this.state.cardClicked.id ===product.id){
+                product.name = inputFromPopup;
+                return product
+            }
+            else{
+                return product;
+            }
+        })
+        this.setState({ productCards: newState, open: !this.state.open,});
+    }
 
     onCardClicked = (idFromCard) => {
-        if(this.state.productCards[idFromCard - 1].name !== "placeholder"){
+        if (this.state.productCards[idFromCard - 1].name === "placeholder") {
             this.setState({
-                editMode: true
-            })
-        }
-        else{
-            this.setState({
-                editMode: false
-            })
-        }
-        this.setState(
-            {
+                editMode: false,
                 open: !this.state.open,
                 cardClicked: this.state.productCards[idFromCard - 1],
-            }
-        );
+            })
+        }
+        this.setState({
+            editMode: true,
+            open: !this.state.open,
+            cardClicked: this.state.productCards[idFromCard - 1],
+        })
     }
 
     render() {
@@ -74,7 +84,7 @@ class Dashboard extends React.Component {
             )
         }
         return (
-            <Popup editMode={this.state.editMode} cardClicked={this.state.cardClicked} addButtonClicked={this.addButtonClicked} />
+            <Popup editButtonClicked={this.editButtonClicked} editMode={this.state.editMode} cardClicked={this.state.cardClicked} addButtonClicked={this.addButtonClicked} />
         )
     }
 }
