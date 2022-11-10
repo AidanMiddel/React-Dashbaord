@@ -30,6 +30,12 @@
     border-radius: 2rem;
     gap: 2rem;
     position: relative;
+    transition: 1s;
+}
+
+.productsList__item--gray:hover{
+    cursor: pointer;
+    filter: grayscale(1);
 }
 
 .productsList__img{
